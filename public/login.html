@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+<h2>Login</h2>
+<form id="loginForm">
+  <input type="text" name="username" placeholder="Username" required /><br/>
+  <input type="password" name="password" placeholder="Password" required /><br/>
+  <button type="submit">Login</button>
+</form>
+<div id="result" style="margin-top:20px; border:1px solid #ccc; padding:10px;"></div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+
+  const res = await fetch("/api/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  const result = await res.json();
+  if (result.success) {
+    document.getElementById("result").innerHTML = `
+      ${result.message}<br/>
+      Entered Password: ${result.password}<br/>
+      Salt from DB: ${result.salt}<br/>
+      Hash from DB: ${result.hash}
+    `;
+  } else {
+    document.getElementById("result").textContent = result.message;
+  }
+});
+</script>
+<a href="index.html">Home</a>
+</body>
+</html>
