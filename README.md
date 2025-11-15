@@ -1,52 +1,58 @@
-🔐 Password Hashing & Salting Demo
+# 🔐 Password Hashing & Salting Demo  
 
-Author: Mishal Mohammed
-Project Type: Web Security / Authentication Demo
-Demo Type: In-Memory Database
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  
 
-📌 Project Overview
+**Author:** Mishal Mohammed 
+**Project Type:** Web Security / Authentication Demo  
+**Demo Type:** In-Memory Database  
 
-This project demonstrates secure password storage using hashing and salting.
+---
 
-Users can:
+## 📌 Project Overview
 
-Register a new account
+This project demonstrates **secure password storage** using **hashing and salting**.  
 
-Login securely
+Users can:  
 
-View all users (hashes only)
+- **Register** a new account  
+- **Login** securely  
+- **View all users** (hashes only)  
+- **Search** for a specific user  
 
-Search for a specific user
+> Passwords are **never stored in plain text**; only hashed passwords with unique salts are saved.  
 
-Passwords are never stored in plain text; only hashed passwords with unique salts are saved.
+**Key Learning Outcomes:**  
 
-Key Learning Outcomes:
+- Understanding **password hashing and salting**  
+- Implementing **secure authentication**  
+- Simulating a **database in memory** for demo purposes  
 
-Understanding password hashing and salting
+---
 
-Implementing secure authentication
+## ✨ Features
 
-Simulating a database in memory for demo purposes
+| Feature | Description |
+|---------|-------------|
+| **User Registration** | Register with username and password |
+| **Password Hashing** | Passwords hashed using bcrypt |
+| **Salting** | Unique salt generated per user |
+| **Login Verification** | Compares entered password against stored hash |
+| **View Database** | `/view-db` shows all users with hash & salt |
+| **Search User** | `/search/:username` returns specific user data |
 
-✨ Features
-Feature	Description
-User Registration	Register with username and password
-Password Hashing	Passwords hashed using bcrypt
-Salting	Unique salt generated per user
-Login Verification	Compares entered password against stored hash
-View Database	/view-db shows all users with hash & salt
-Search User	/search/:username returns specific user data
-🛠️ Tech Stack
+---
 
-Backend: Node.js, Express
+## 🛠️ Tech Stack
 
-Frontend: HTML, JavaScript
+- **Backend:** Node.js, Express  
+- **Frontend:** HTML, JavaScript  
+- **Security:** bcrypt (hashing & salting)  
+- **Database:** In-memory JavaScript object  
 
-Security: bcrypt (hashing & salting)
+---
 
-Database: In-memory JavaScript object
+## 📂 Project Structure
 
-📂 Project Structure
 password-hashing-demo/
 │
 ├─ public/
@@ -61,18 +67,18 @@ password-hashing-demo/
 ├─ package.json
 └─ README.md
 
-⚙️ Setup & Usage
-1️⃣ Clone Repository
+## ⚙️ Setup & Usage
+# 1️⃣ Clone Repository
 git clone https://github.com/yourusername/password-hashing-demo.git
 cd password-hashing-demo
 
-2️⃣ Install Dependencies
+# 2️⃣ Install Dependencies
 npm install
 
-3️⃣ Start Server
+# 3️⃣ Start Server
 node server.js
 
-4️⃣ Open in Browser
+# 4️⃣ Open in Browser
 
 Register: http://localhost:3000/register.html
 
@@ -82,13 +88,13 @@ View All Users: http://localhost:3000/view-db
 
 Search User: http://localhost:3000/search/<username>
 
-📸 Demo Screenshots
+## 📸 Demo Screenshots
 
 Register Page:
 
 View Database:
 
-🧠 What We Learn
+## 🧠 What We Learn
 
 Password Hashing: Converts a plain text password into an irreversible string using bcrypt.
 
@@ -100,7 +106,7 @@ Safe Storage: Only hash + salt are stored, never the actual password.
 
 Authentication Flow Understanding: Shows how registration, login, and verification work securely.
 
-🔍 How It Works
+## 🔍 How It Works
 
 Registration
 
@@ -122,7 +128,7 @@ View/Search Users
 
 /search/:username → Returns specific user’s hash & salt
 
-💡 Notes
+## 💡 Notes
 
 In-memory storage → data is lost when server restarts
 
@@ -130,7 +136,7 @@ Ideal for learning and demo purposes
 
 For production, replace with a database like MySQL or MongoDB
 
-📖 Conclusion
+## 📖 Conclusion
 
 This project demonstrates:
 
