@@ -1,6 +1,7 @@
 Password Hashing & Salting Demo
 
-Author: Your Name Project Type: Web Security / Authentication Demo Demo Type: In-Memory Database
+Author: Mishal Mohammed
+Project Type: Web Security / Authentication Demo Demo Type: In-Memory Database
 
 📌 Project Overview
 
