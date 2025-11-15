@@ -1,21 +1,42 @@
-Password Hashing & Salting Demo
+🔐 Password Hashing & Salting Demo
 
 Author: Mishal Mohammed
-Project Type: Web Security / Authentication Demo Demo Type: In-Memory Database
+Project Type: Web Security / Authentication Demo
+Demo Type: In-Memory Database
 
 📌 Project Overview
 
-This project demonstrates secure password storage using hashing and salting. Users can register, login, view all users, and search for specific users using a simple web interface. The passwords are never stored in plain text—only hashes with unique salts are kept.
+This project demonstrates secure password storage using hashing and salting.
+
+Users can:
+
+Register a new account
+
+Login securely
+
+View all users (hashes only)
+
+Search for a specific user
+
+Passwords are never stored in plain text; only hashed passwords with unique salts are saved.
 
 Key Learning Outcomes:
 
 Understanding password hashing and salting
 
-Implementing secure user authentication
+Implementing secure authentication
 
 Simulating a database in memory for demo purposes
 
-✨ Features Feature Description User Registration Register with username and password Password Hashing Passwords hashed using bcrypt Salting Unique salt generated per user Login Verification Compares password against hash View Database /view-db shows all users Search User /search/:username returns specific user 🛠️ Tech Stack
+✨ Features
+Feature	Description
+User Registration	Register with username and password
+Password Hashing	Passwords hashed using bcrypt
+Salting	Unique salt generated per user
+Login Verification	Compares entered password against stored hash
+View Database	/view-db shows all users with hash & salt
+Search User	/search/:username returns specific user data
+🛠️ Tech Stack
 
 Backend: Node.js, Express
 
@@ -23,15 +44,33 @@ Frontend: HTML, JavaScript
 
 Security: bcrypt (hashing & salting)
 
-Database: In-memory JS object (users)
+Database: In-memory JavaScript object
 
-📂 Project Structure password-hashing-demo/ │ ├─ public/ │ ├─ register.html │ ├─ login.html │ ├─ images/ │ ├─ register-demo.png │ ├─ view-db-demo.png │ ├─ server.js ├─ package.json └─ README.md
+📂 Project Structure
+password-hashing-demo/
+│
+├─ public/
+│   ├─ register.html
+│   ├─ login.html
+│
+├─ images/
+│   ├─ register-demo.png
+│   ├─ view-db-demo.png
+│
+├─ server.js
+├─ package.json
+└─ README.md
 
-⚙️ Setup & Usage 1️⃣ Clone Repository git clone https://github.com/yourusername/password-hashing-demo.git cd password-hashing-demo
+⚙️ Setup & Usage
+1️⃣ Clone Repository
+git clone https://github.com/yourusername/password-hashing-demo.git
+cd password-hashing-demo
 
-2️⃣ Install Dependencies npm install
+2️⃣ Install Dependencies
+npm install
 
-3️⃣ Start Server node server.js
+3️⃣ Start Server
+node server.js
 
 4️⃣ Open in Browser
 
@@ -41,73 +80,51 @@ Login: http://localhost:3000/login.html
 
 View All Users: http://localhost:3000/view-db
 
-Search User: http://localhost:3000/search/
+Search User: http://localhost:3000/search/<username>
 
 📸 Demo Screenshots
 
-Register Page
+Register Page:
 
-View Database
+View Database:
 
 🧠 What We Learn
 
-From this project, we understand the core principles of password security and authentication:
+Password Hashing: Converts a plain text password into an irreversible string using bcrypt.
 
-Password Hashing:
+Salting: Adds a unique random string to each password before hashing, preventing rainbow table attacks.
 
-Converts a plain text password into an irreversible string using bcrypt.
+Secure Verification: During login, the entered password is hashed with the same salt and compared to the stored hash.
 
-Ensures passwords are never stored in plain text.
+Safe Storage: Only hash + salt are stored, never the actual password.
 
-Salting:
-
-Adds a unique random string to each password before hashing.
-
-Prevents attackers from cracking passwords using precomputed tables.
-
-Secure Verification:
-
-During login, the entered password is hashed with the same salt and compared to the stored hash.
-
-Authentication is successful only if the hash matches.
-
-Safe Storage Practices:
-
-Only hash + salt are stored, never the actual password.
-
-Demonstrates best practices for protecting user credentials.
-
-Authentication Flow Understanding:
-
-How registration, login, and user verification work in a secure way.
-
-Provides a hands-on understanding of real-world security principles in web applications.
+Authentication Flow Understanding: Shows how registration, login, and verification work securely.
 
 🔍 How It Works
 
-Registration:
+Registration
 
 User submits username and password
 
 Server generates a salt and hashes the password
 
-Stores hash and salt in memory
+Stores hash + salt in memory
 
-Login:
+Login
 
 User submits credentials
 
 Server compares input password with stored hash using bcrypt
 
-View/Search Users:
+View/Search Users
 
 /view-db → Shows all users
 
-/search/:username → Returns a specific user’s hash & salt
+/search/:username → Returns specific user’s hash & salt
 
 💡 Notes
 
-In-memory storage means data is lost on server restart
+In-memory storage → data is lost when server restarts
 
 Ideal for learning and demo purposes
 
@@ -117,10 +134,10 @@ For production, replace with a database like MySQL or MongoDB
 
 This project demonstrates:
 
-The importance of hashing and salting passwords
+Importance of hashing and salting passwords
 
 How authentication works in a simple web app
 
 Safe handling of user credentials
 
-A beginner-friendly demo ready for portfolio display
+Beginner-friendly demo ready for portfolio showcase
