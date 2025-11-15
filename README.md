@@ -67,18 +67,18 @@ password-hashing-demo/
 ├─ package.json
 └─ README.md
 
-## ⚙️ Setup & Usage
-# 1️⃣ Clone Repository
+# ⚙️ Setup & Usage
+## 1️⃣ Clone Repository
 git clone https://github.com/yourusername/password-hashing-demo.git
 cd password-hashing-demo
 
-# 2️⃣ Install Dependencies
+## 2️⃣ Install Dependencies
 npm install
 
-# 3️⃣ Start Server
+## 3️⃣ Start Server
 node server.js
 
-# 4️⃣ Open in Browser
+## 4️⃣ Open in Browser
 
 Register: http://localhost:3000/register.html
 
